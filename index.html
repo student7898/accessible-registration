@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration Form</title>
+    <style>
+        body{
+            background-color: rgb(77, 71, 71);
+            color: aliceblue;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: large;
+        }
+        h1{
+            text-align: center;
+        }
+        #info{
+            text-align: right;
+            position: absolute;
+        }
+        input:invalid:required{
+            border: 2px solid red;
+        }
+        input:valid:required{
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Apply For Your Identification Card</h1>
+    <form id="info">
+        <label>First Name: <input aria-label="enter your first name" type="text" name="name" required></label><br>
+        <label>Middle Name: <input aria-label="enter your middle name" type="text" name="name"></label><br>
+        <label>Last Name: <input aria-label="enter your last name" type="text" name="name" required></label><br><br>
+
+        <label>Date of Birth: <input aria-label="enter your date of birth" type="date" name="date" max="2000-01-01" required></label><br><br>
+
+        <label aria-label="pick your gender">Gender: 
+            <input aria-label="male" type="radio" name="gender" value="male" required>Male
+            <input aria-label="female" type="radio" name="gender" value="female" required>Female
+            <input aria-label="other" type="radio" name="gender" value="other" required>Other
+        </label><br><br>
+
+        <label>Email: <input aria-label="enter your email" type="email" name="email" title="Email must be a valid email" required></label><br><br>
+
+        <label>Phone: <input aria-label="enter your phone number" type="tel" name="phone" pattern="[0-9]{10}" title="Phone number must be at exactly 10 numbers" required></label><br><br>
+
+        <label>Password: <input aria-label="enter your password" type="password" name="password" pattern=".{4,}" title="Password must be at least 4 characters" required></label><br><br>
+        
+        <button aria-label="submit form" type="submit">Apply</button><br>
+    </form>
+</body>
+</html>
